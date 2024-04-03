@@ -21,6 +21,7 @@
   "author": "Dev Academy Aotearoa",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
     "superagent": "^8.1.2"
   },
   "devDependencies": {

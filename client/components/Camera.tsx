@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import axios from 'axios';
 
 const CameraComponent: React.FC = () => {
   const [isCapturedImageDisplayed, setIsCapturedImageDisplayed] =
@@ -24,7 +25,7 @@ const CameraComponent: React.FC = () => {
     }
   }, [])
 
-  const toggleDisplay = () => {
+  const toggleDisplay = async () => {
     const viewfinder = viewfinderRef.current
     if (viewfinder) {
       if (isCapturedImageDisplayed) {
@@ -82,5 +83,6 @@ const CameraComponent: React.FC = () => {
     </div>
   )
 }
+
 
 export default CameraComponent
